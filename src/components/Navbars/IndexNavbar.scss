@@ -1,0 +1,14 @@
+.dropdown-toggle::after {
+  left: 6px;
+  top: 2px;
+  position: relative;
+}
+
+.dropdown.show .dropdown-menu[x-placement="bottom-start"] {
+  top: 15px !important;
+}
+
+li a:hover {
+  font-weight: bolder !important;
+  transition: ease-in 0.3s;
+}
