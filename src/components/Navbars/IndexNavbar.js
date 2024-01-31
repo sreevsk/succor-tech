@@ -21,6 +21,8 @@ import data from "../../assets/properties/data.json";
 // nodejs library that concatenates strings
 import classnames from "classnames";
 import "./IndexNavbar.scss";
+import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
   UncontrolledDropdown,
@@ -77,8 +79,8 @@ function IndexNavbar() {
     <Navbar className={classnames("fixed-top", navbarColor, "p-1")} expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand href="/index" className=" font-weight-bolder">
-            {data.title}
+          <NavbarBrand className=" font-weight-bolder">
+            <Link to="/index">{data.title}</Link>
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -99,8 +101,8 @@ function IndexNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink href="/index" style={styles.nav_link}>
-                Home
+              <NavLink style={styles.nav_link}>
+                <Link to="/index">Home</Link>
               </NavLink>
             </NavItem>
             <NavItem>
