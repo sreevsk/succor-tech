@@ -79,9 +79,9 @@ function IndexNavbar() {
     <Navbar className={classnames("fixed-top", navbarColor, "p-1")} expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand className=" font-weight-bolder">
-            <Link to="/index">{data.title}</Link>
-          </NavbarBrand>
+          <Link className="navbar-brand font-weight-bolder" to="/index">
+            {data.title}
+          </Link>
           <button
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {
@@ -101,9 +101,9 @@ function IndexNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink style={styles.nav_link}>
-                <Link to="/index">Home</Link>
-              </NavLink>
+              <Link className="nav-link" style={styles.nav_link} to="/home">
+                Home
+              </Link>
             </NavItem>
             <NavItem>
               <NavLink style={styles.nav_link}>About Us</NavLink>

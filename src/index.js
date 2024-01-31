@@ -34,9 +34,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HashRouter>
     <Routes>
-      <Route path="/index" element={<Index />} />
-      <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      <Route path="*" element={<Navigate to="/index" replace />} />
+      <Route path="/home" element={<Index />} />
+      <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   </HashRouter>
 );

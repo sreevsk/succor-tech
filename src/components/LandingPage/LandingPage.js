@@ -21,6 +21,7 @@ import data from "../../assets/properties/data.json";
 import "./LandingPage.scss";
 import Consulting from "./Consulting/Consulting";
 import Supports from "./Supports/Supports";
+import GetInTouch from "./GetInTouch/GetInTouch";
 // reactstrap components
 import {
   Button,
@@ -240,6 +241,7 @@ function LandingPage() {
         </div>
         <Supports />
         <Consulting />
+        <GetInTouch />
       </div>
     </>
   );

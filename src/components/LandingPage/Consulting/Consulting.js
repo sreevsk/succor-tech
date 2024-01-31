@@ -8,7 +8,7 @@ function Consulting() {
   return (
     <>
       <div className="consulting-section section text-center pt-2 pb-2 custom-section">
-        <Container>
+        <Container className="p-0">
           <h2 className="title">Consulting</h2>
           <p className="description text-left text-black">
             <b>{data.title}</b> understands the growing need of employment and
