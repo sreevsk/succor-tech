@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.79396233.css",
-    "main.js": "/static/js/main.4f622a35.js",
-    "static/media/temp-hire.png": "/static/media/temp-hire.c56f4a54f757c4f6a070.png",
-    "static/media/offshore-hire.png": "/static/media/offshore-hire.9c8b6a0682b2ea67c38f.png",
-    "static/media/full-time-hire.jpg": "/static/media/full-time-hire.cab084a178f9b4fbc0a6.jpg",
-    "static/media/clouds.png": "/static/media/clouds.3c700c1313cc1cd3d3c5.png",
-    "static/media/succor-img.jpg": "/static/media/succor-img.0e1675dc9d58f884de7c.jpg",
-    "static/media/promo.png": "/static/media/promo.f39d32d244fa5beabbaf.png",
-    "static/media/contract-to-hire.jpg": "/static/media/contract-to-hire.af1c725c1e984cc90243.jpg",
-    "static/media/nucleo-icons.eot": "/static/media/nucleo-icons.bd42d77b9672555647d1.eot",
-    "static/media/nucleo-icons.ttf": "/static/media/nucleo-icons.4466aeec3386b965a232.ttf",
-    "static/media/nucleo-icons.woff": "/static/media/nucleo-icons.8e954b749f951b654fc6.woff",
-    "static/media/nucleo-icons.woff2": "/static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
-    "index.html": "/index.html"
+    "main.css": "./static/css/main.82a6aff6.css",
+    "main.js": "./static/js/main.b0acaca6.js",
+    "static/media/temp-hire.png": "./static/media/temp-hire.c56f4a54f757c4f6a070.png",
+    "static/media/offshore-hire.png": "./static/media/offshore-hire.9c8b6a0682b2ea67c38f.png",
+    "static/media/full-time-hire.jpg": "./static/media/full-time-hire.cab084a178f9b4fbc0a6.jpg",
+    "static/media/clouds.png": "./static/media/clouds.3c700c1313cc1cd3d3c5.png",
+    "static/media/succor-img.jpg": "./static/media/succor-img.0e1675dc9d58f884de7c.jpg",
+    "static/media/promo.png": "./static/media/promo.f39d32d244fa5beabbaf.png",
+    "static/media/contract-to-hire.jpg": "./static/media/contract-to-hire.af1c725c1e984cc90243.jpg",
+    "static/media/nucleo-icons.eot": "./static/media/nucleo-icons.bd42d77b9672555647d1.eot",
+    "static/media/nucleo-icons.ttf": "./static/media/nucleo-icons.4466aeec3386b965a232.ttf",
+    "static/media/nucleo-icons.woff": "./static/media/nucleo-icons.8e954b749f951b654fc6.woff",
+    "static/media/nucleo-icons.woff2": "./static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
+    "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.79396233.css",
-    "static/js/main.4f622a35.js"
+    "static/css/main.82a6aff6.css",
+    "static/js/main.b0acaca6.js"
   ]
 }
