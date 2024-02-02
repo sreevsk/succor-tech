@@ -73,7 +73,7 @@ function Supports() {
             </Col>
             <Col md="6">
               <div
-                class="support-image"
+                className="support-image"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/promo.png") + ")",

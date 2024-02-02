@@ -26,16 +26,20 @@ import "assets/scss/paper-kit.scss?v=1.3.0";
 import "assets/demo/demo.css?v=1.3.0";
 // pages
 import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
-// others
+import AboutUs from "components/AboutUs/AboutUs";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import Footer from "components/Footers/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <HashRouter>
+    <IndexNavbar />
     <Routes>
       <Route path="/home" element={<Index />} />
+      <Route path="/about-us" element={<AboutUs />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
+    <Footer />
   </HashRouter>
 );

@@ -33,13 +33,13 @@ function Consulting() {
           <Row className="pt-5">
             <Col md="6">
               <div
-                class="support-card"
+                className="support-card"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/full-time-hire.jpg") + ")",
                 }}
               >
-                <div class="card-content">
+                <div className="card-content">
                   <h2>Fulltime hire</h2>
                   <p>
                     Full time hire means a direct job offer to a candidate from
@@ -57,13 +57,13 @@ function Consulting() {
             </Col>
             <Col md="6">
               <div
-                class="support-card"
+                className="support-card"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/contract-to-hire.jpg") + ")",
                 }}
               >
-                <div class="card-content">
+                <div className="card-content">
                   <h2>Contract to hire</h2>
                   <p>
                     Contract-to-Hire Services Our contract-to-hire services
@@ -85,13 +85,13 @@ function Consulting() {
           <Row className="pt-5">
             <Col md="6">
               <div
-                class="support-card"
+                className="support-card"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/offshore-hire.png") + ")",
                 }}
               >
-                <div class="card-content">
+                <div className="card-content">
                   <h2>Offshore hire</h2>
                   <p>
                     Our offshore staffing model allows you to choose between
@@ -107,13 +107,13 @@ function Consulting() {
             </Col>
             <Col md="6">
               <div
-                class="support-card"
+                className="support-card"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/temp-hire.png") + ")",
                 }}
               >
-                <div class="card-content">
+                <div className="card-content">
                   <h2>Temp hire</h2>
                   <p>
                     Our Temp-to-Hire Program lets you bring a selected candidate

@@ -93,8 +93,8 @@ function GetInTouch() {
         </Container>
       </div>
 
-      <section class="py-4 section-bubble3">
-        <div class="container">
+      <section className="py-4 section-bubble3">
+        <div className="container">
           <h1>{data.title}</h1>
           <p className="pt-3">
             Nascent Technologies. is like the virtual bridge between job

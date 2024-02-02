@@ -15,7 +15,7 @@ $spacer-height: 20vw;
 $section1-bg-color: #ffffff;
 $section2-bg-color: #ffd2b0;
 $section3-bg-color: #384364;
-$section4-bg-color: #cccccc;
+$section4-bg-color: #ffffff;
 $section5-bg-color: #333333;
 
 @mixin bubbles($bubbles-type, $color) {
@@ -52,13 +52,11 @@ $section5-bg-color: #333333;
 
     width: 100%;
     height: $spacer-height;
-    background: url("") green; // needs to be next sections background
     background-size: 100%;
 
     transform: translate(0, 100%);
   }
 }
-
 .section-bubble1 {
   @include section-bubble-with-colors(
     a,

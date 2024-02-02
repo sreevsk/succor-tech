@@ -106,7 +106,9 @@ function IndexNavbar() {
               </Link>
             </NavItem>
             <NavItem>
-              <NavLink style={styles.nav_link}>About Us</NavLink>
+              <Link className="nav-link" style={styles.nav_link} to="/about-us">
+                About Us
+              </Link>
             </NavItem>
             <UncontrolledDropdown nav>
               <DropdownToggle

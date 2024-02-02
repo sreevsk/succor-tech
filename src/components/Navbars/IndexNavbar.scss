@@ -12,3 +12,12 @@ li a:hover {
   font-weight: bolder !important;
   transition: ease-in 0.3s;
 }
+.navbar {
+  background: #343a40c9;
+  .navbar-brand {
+    color: white;
+  }
+  .navbar-nav .nav-item .nav-link {
+    color: white;
+  }
+}
