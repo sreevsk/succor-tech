@@ -1,42 +1,14 @@
 import React from "react";
 import "./AboutUs.scss";
 import data from "../../assets/properties/data.json";
-import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 function AboutUs() {
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
   return (
     <>
       <div className="about-us-section">
         <div
-          className="page-header page-header-xs"
+          className="section-dark page-header page-header-xs"
           style={{
             backgroundImage:
               "url(" + require("assets/img/succor-img.jpg") + ")",

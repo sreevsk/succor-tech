@@ -137,9 +137,9 @@ function IndexNavbar() {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink data-placement="bottom" style={styles.nav_link}>
+              <Link className="nav-link" style={styles.nav_link} to="/support">
                 Support
-              </NavLink>
+              </Link>
             </NavItem>
             <UncontrolledDropdown nav>
               <DropdownToggle

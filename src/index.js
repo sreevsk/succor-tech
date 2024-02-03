@@ -24,12 +24,13 @@ import { HashRouter, Route, Navigate, Routes } from "react-router-dom";
 import "bootstrap/scss/bootstrap.scss";
 import "assets/scss/paper-kit.scss?v=1.3.0";
 import "assets/demo/demo.css?v=1.3.0";
+import "./index.scss";
 // pages
 import Index from "views/Index.js";
 import AboutUs from "components/AboutUs/AboutUs";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer";
-
+import Support from "components/Support/Support";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -38,6 +39,7 @@ root.render(
     <Routes>
       <Route path="/home" element={<Index />} />
       <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/support" element={<Support />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
     <Footer />
