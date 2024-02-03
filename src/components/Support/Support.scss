@@ -1,8 +1,11 @@
 .support-section {
-  .nc-icon {
-    font-size: 40px;
-  }
   .card {
+    .info-title {
+      margin-top: 0.5rem !important;
+    }
+    .icon {
+      margin-left: -10px;
+    }
     .icon,
     .description {
       text-align: center;
@@ -10,6 +13,9 @@
     }
   }
   .op-team-support {
+    .nc-icon {
+      font-size: 40px;
+    }
     padding-top: 0px;
 
     .text {

@@ -29,7 +29,7 @@ function Support() {
             }}
           />
         </div>
-        <div className="section profile-content">
+        <div className="section profile-content pb-4">
           <Container>
             <div className="owner">
               <div className="avatar"></div>
@@ -57,7 +57,6 @@ function Support() {
                   SQL Server, or upgrading desktops to the newest version of
                   Windows, Tech Support is there. That’s what we do.
                 </p>
-                <br />
                 <div className="list-div">
                   <ol
                     style={{
@@ -167,7 +166,7 @@ function Support() {
               <Col md="4">
                 <div className="info card">
                   <div className="pt-3 icon icon-info">
-                    <i className="nc-icon nc-album-2" />
+                    <i className="fa fa-exclamation-triangle" />
                   </div>
                   <div className="description">
                     <h4 className="info-title">Incident Management</h4>
@@ -185,7 +184,7 @@ function Support() {
               <Col md="4">
                 <div className="info card">
                   <div className="pt-3 icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
+                    <i className="fa fa-puzzle-piece" />
                   </div>
                   <div className="description">
                     <h4 className="info-title">Problem Management</h4>
@@ -203,7 +202,7 @@ function Support() {
               <Col md="4">
                 <div className="info card">
                   <div className="pt-3 icon icon-info">
-                    <i className="nc-icon nc-chart-bar-32" />
+                    <i className="fa fa-phone" />
                   </div>
                   <div className="description">
                     <h4 className="info-title">Helpdesk Services</h4>
@@ -223,7 +222,7 @@ function Support() {
               <Col md="4">
                 <div className="info card">
                   <div className="pt-3 icon icon-info">
-                    <i className="nc-icon nc-album-2" />
+                    <i className="fa fa-server" />
                   </div>
                   <div className="description">
                     <h4 className="info-title">Server Management</h4>
@@ -241,7 +240,7 @@ function Support() {
               <Col md="4">
                 <div className="info card">
                   <div className="pt-3 icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
+                    <i className="fa fa-database" />
                   </div>
                   <div className="description">
                     <h4 className="info-title">Database Administration</h4>
@@ -259,7 +258,7 @@ function Support() {
               <Col md="4">
                 <div className="info card">
                   <div className="pt-3 icon icon-info">
-                    <i className="nc-icon nc-chart-bar-32" />
+                    <i className="fa fa-shield" />
                   </div>
                   <div className="description">
                     <h4 className="info-title">Network and Firewall</h4>
@@ -289,7 +288,7 @@ function Support() {
             <Row className="pt-4">
               <Col md="3">
                 <div className="text-center text-white">
-                  <i className="nc-icon nc-chat-33" />
+                  <i className="fa fa-chart-line fa-3x" />
                 </div>
                 <div className="text pt-2">
                   <p>Application Monitoring</p>
@@ -297,7 +296,7 @@ function Support() {
               </Col>
               <Col md="3">
                 <div className="text-center text-white">
-                  <i className="nc-icon nc-email-85" />
+                  <i className="fa fa-desktop fa-3x" />
                 </div>
                 <div className="text pt-2">
                   <p>Hardware Monitoring</p>
@@ -305,7 +304,7 @@ function Support() {
               </Col>
               <Col md="3">
                 <div className="text-center text-white">
-                  <i className="nc-icon nc-laptop" />
+                  <i className="fa fa-server fa-3x" />
                 </div>
                 <div className="text pt-2">
                   <p>Network Monitoring</p>
@@ -315,7 +314,7 @@ function Support() {
             <Row className="pt-4">
               <Col md="3">
                 <div className="text-center text-white">
-                  <i className="nc-icon nc-chat-33" />
+                  <i className="fa fa-sitemap fa-3x" />
                 </div>
                 <div className="text pt-2">
                   <p>Server Monitoring</p>
@@ -323,7 +322,7 @@ function Support() {
               </Col>
               <Col md="3">
                 <div className="text-center text-white">
-                  <i className="nc-icon nc-email-85" />
+                  <i className="fa fa-cloud fa-3x" />
                 </div>
                 <div className="text pt-2">
                   <p>Cloud Monitoring</p>
