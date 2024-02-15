@@ -1,27 +1,9 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import data from "../../assets/properties/data.json";
-// nodejs library that concatenates strings
 import classnames from "classnames";
 import "./IndexNavbar.scss";
 import { Link } from "react-router-dom";
+import { motion, MotionConfig } from "framer-motion";
 
 // reactstrap components
 import {
@@ -29,9 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Button,
   Collapse,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
@@ -75,12 +55,23 @@ function IndexNavbar() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
   });
+
   return (
     <Navbar className={classnames("fixed-top", navbarColor, "p-1")} expand="lg">
       <Container>
         <div className="navbar-translate">
           <Link className="navbar-brand font-weight-bolder" to="/index">
-            {data.title}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.6 }}
+              whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.5 } }}
+              whileHover={{
+                letterSpacing: "2px",
+                x: -20,
+              }}
+              transition={{ duration: 0.4 }}
+            >
+              {data.title}
+            </motion.div>
           </Link>
           <button
             aria-expanded={navbarCollapse}
@@ -100,73 +91,157 @@ function IndexNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-            <NavItem>
-              <Link className="nav-link" style={styles.nav_link} to="/home">
-                Home
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link className="nav-link" style={styles.nav_link} to="/about-us">
-                About Us
-              </Link>
-            </NavItem>
-            <UncontrolledDropdown nav>
-              <DropdownToggle
-                style={styles.nav_link}
-                aria-haspopup={true}
-                caret
-                color="default"
-                data-toggle="dropdown"
-                href="#pablo"
-                id="navbarDropdownMenuLink"
-                nav
-                onClick={(e) => e.preventDefault()}
-              >
-                Services
-              </DropdownToggle>
-              <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  IT Consulting Services
-                </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  IT Project Services
-                </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  GIS Services
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <NavItem>
-              <Link className="nav-link" style={styles.nav_link} to="/support">
-                Support
-              </Link>
-            </NavItem>
-            <UncontrolledDropdown nav>
-              <DropdownToggle
-                style={styles.nav_link}
-                aria-haspopup={true}
-                caret
-                color="default"
-                data-toggle="dropdown"
-                href="#pablo"
-                id="navbarDropdownMenuLink"
-                nav
-                onClick={(e) => e.preventDefault()}
-              >
-                Our Catalogue
-              </DropdownToggle>
-              <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Our Portfolio
-                </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Our Jobs
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <NavItem>
-              <NavLink style={styles.nav_link}>Contact Us</NavLink>
-            </NavItem>
+            <MotionConfig
+              whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+              whileTap={{ y: 3 }}
+            >
+              <NavItem>
+                <Link className="nav-link" style={styles.nav_link} to="/home">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.6, delay: 0.5 },
+                    }}
+                  >
+                    Home
+                  </motion.div>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link
+                  className="nav-link"
+                  style={styles.nav_link}
+                  to="/about-us"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.6, delay: 0.5 },
+                    }}
+                  >
+                    About Us
+                  </motion.div>
+                </Link>
+              </NavItem>
+              <UncontrolledDropdown nav>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.6, delay: 0.5 },
+                  }}
+                >
+                  <DropdownToggle
+                    style={styles.nav_link}
+                    aria-haspopup={true}
+                    caret
+                    color="default"
+                    data-toggle="dropdown"
+                    href="#pablo"
+                    id="navbarDropdownMenuLink"
+                    nav
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Services
+                  </DropdownToggle>
+                </motion.div>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    IT Consulting Services
+                  </DropdownItem>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    IT Project Services
+                  </DropdownItem>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    GIS Services
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <Link
+                  className="nav-link"
+                  style={styles.nav_link}
+                  to="/support"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.6, delay: 0.5 },
+                    }}
+                  >
+                    Support
+                  </motion.div>
+                </Link>
+              </NavItem>
+              <UncontrolledDropdown nav>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.6, delay: 0.5 },
+                  }}
+                >
+                  <DropdownToggle
+                    style={styles.nav_link}
+                    aria-haspopup={true}
+                    caret
+                    color="default"
+                    data-toggle="dropdown"
+                    href="#pablo"
+                    id="navbarDropdownMenuLink"
+                    nav
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Our Catalogue
+                  </DropdownToggle>
+                </motion.div>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Our Portfolio
+                  </DropdownItem>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Our Jobs
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink style={styles.nav_link}>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.6, delay: 0.5 },
+                    }}
+                  >
+                    Contact Us
+                  </motion.div>
+                </NavLink>
+              </NavItem>
+            </MotionConfig>
           </Nav>
         </Collapse>
       </Container>

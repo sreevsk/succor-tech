@@ -1,34 +1,15 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React from "react";
-import data from "../../assets/properties/data.json";
-
-// reactstrap components
+import AnimatedTextCharacter from "components/Shared/AnimtedTextCharacter";
 import { Container } from "reactstrap";
-
-// core components
+import { motion } from "framer-motion";
 
 function IndexHeader() {
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 1.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7 }}
         className="page-header section-dark"
         style={{
           backgroundImage: "url(" + require("assets/img/succor-img.jpg") + ")",
@@ -38,12 +19,27 @@ function IndexHeader() {
         <div className="content-center">
           <Container>
             <div className="title-brand" style={{ maxWidth: 780 + "px" }}>
-              <h1 className="presentation-title">{data.title}</h1>
+              <AnimatedTextCharacter
+                text="Succor"
+                className="presentation-title text-center font-weight-bolder"
+                style={{ fontSize: "6rem" }}
+              />
+              <AnimatedTextCharacter
+                text="Technologies"
+                className="presentation-title text-center font-weight-bolder"
+                style={{ fontSize: "6rem" }}
+              />
+              {/* <h1 className="presentation-title">Technologies</h1> */}
             </div>
-            <h2 className="presentation-subtitle text-center">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="presentation-subtitle "
+            >
               Virtual Bridge between Job Seekers, Project Developers, and
-              Clients.
-            </h2>
+              Clients
+            </motion.h2>
           </Container>
         </div>
         <div
@@ -52,7 +48,7 @@ function IndexHeader() {
             backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -16,8 +16,11 @@ li a:hover {
   background: #343a40c9;
   .navbar-brand {
     color: white;
+    margin: 0;
+    padding: 1;
   }
   .navbar-nav .nav-item .nav-link {
     color: white;
+    margin: 0;
   }
 }

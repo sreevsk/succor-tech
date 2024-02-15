@@ -1,33 +1,19 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import data from "../../assets/properties/data.json";
 import "./LandingPage.scss";
 import Consulting from "./Consulting/Consulting";
 import Supports from "./Supports/Supports";
 import GetInTouch from "./GetInTouch/GetInTouch";
+import { motion } from "framer-motion";
+import CustomScrollTranslate from "./CustomScrollTransform";
+
+import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
   Button,
   Card,
   CardBody,
-  CardFooter,
   CardTitle,
   Container,
   Row,
@@ -35,6 +21,14 @@ import {
 } from "reactstrap";
 
 function LandingPage() {
+  const prodTranslateCard1 = CustomScrollTranslate(450, -2700, 0, 450);
+  const prodTranslateCard3 = CustomScrollTranslate(-450, 2700, -450, 0);
+
+  const servicesCard1 = CustomScrollTranslate(1000, -3000, 0, 500);
+  const servicesCard2 = CustomScrollTranslate(-1000, 3000, -500, 0);
+  const servicesCard3 = CustomScrollTranslate(1500, -3000, 0, 500);
+  const servicesCard4 = CustomScrollTranslate(-1500, 3000, -500, 0);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -48,32 +42,39 @@ function LandingPage() {
         <div className="section text-center pt-4">
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">Let's talk product</h2>
-                <h5 className="description">
-                  Discover seamless IT solutions with <b>{data.title}</b>. As a
-                  leading IT service consulting firm, we specialize in strategic
-                  planning, system integration, cybersecurity, and digital
-                  transformation. Elevate your business with our expertise and
-                  innovative solutions. Welcome to a new era of efficiency and
-                  growth with <b>{data.title}</b>.
-                </h5>
-                <br />
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  About Us
-                </Button>
-              </Col>
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Col className="ml-auto mr-auto" md="8">
+                  <h2 className="title">Let's talk product</h2>
+                  <h5 className="description">
+                    Discover seamless IT solutions with <b>{data.title}</b>. As
+                    a leading IT service consulting firm, we specialize in
+                    strategic planning, system integration, cybersecurity, and
+                    digital transformation. Elevate your business with our
+                    expertise and innovative solutions. Welcome to a new era of
+                    efficiency and growth with <b>{data.title}</b>.
+                  </h5>
+                  <br />
+                  <Link to="/about-us">
+                    <Button className="btn-round" color="info">
+                      About Us
+                    </Button>
+                  </Link>
+                </Col>
+              </motion.div>
             </Row>
             <br />
             <br />
             <Row className="pt-2">
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ translateX: prodTranslateCard1 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="nc-icon nc-album-2" />
                   </div>
@@ -92,7 +93,7 @@ function LandingPage() {
                       See more
                     </Button>
                   </div>
-                </div>
+                </motion.div>
               </Col>
               <Col md="4">
                 <div className="info card">
@@ -118,7 +119,10 @@ function LandingPage() {
                 </div>
               </Col>
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ translateX: prodTranslateCard3 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="nc-icon nc-chart-bar-32" />
                   </div>
@@ -138,28 +142,40 @@ function LandingPage() {
                       See more
                     </Button>
                   </div>
-                </div>
+                </motion.div>
               </Col>
             </Row>
           </Container>
         </div>
         <div className="section section-dark text-center pt-3 custom-section">
           <Container>
-            <h2 className="title">Services</h2>
-            <p className="description text-left">
-              Explore tailored IT solutions at <b>{data.title}</b>. From
-              strategic planning to system integration, cybersecurity, and
-              digital transformation, our services are designed to propel your
-              business forward. Experience efficiency and innovation with
-              <b>{data.title}</b>, your trusted IT service consulting partner.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, type: "spring" }}
+              viewport={{ once: true }}
+            >
+              <h2 className="title">Services</h2>
+              <p className="description text-left">
+                Explore tailored IT solutions at <b>{data.title}</b>. From
+                strategic planning to system integration, cybersecurity, and
+                digital transformation, our services are designed to propel your
+                business forward. Experience efficiency and innovation with
+                <b>{data.title}</b>, your trusted IT service consulting partner.
+              </p>
+            </motion.div>
             <Row>
               <Col md="6">
-                <Card className="card-profile">
+                <motion.div
+                  style={{
+                    translateX: servicesCard1,
+                  }}
+                  className="card card-profile"
+                >
                   <div className="card-avatar icon icon-success pt-4">
                     <i className="nc-icon nc-box-2" />
                   </div>
-                  <CardBody>
+                  <div className="card-body">
                     <div className="author text-left">
                       <CardTitle tag="h4">
                         Project Implementation Services
@@ -172,15 +188,20 @@ function LandingPage() {
                       and KPIs to ensure the highest degree of excellence
                       throughout your project.
                     </p>
-                  </CardBody>
-                </Card>
+                  </div>
+                </motion.div>
               </Col>
               <Col md="6">
-                <Card className="card-profile">
+                <motion.div
+                  style={{
+                    translateX: servicesCard2,
+                  }}
+                  className="card card-profile"
+                >
                   <div className="card-avatar icon icon-success pt-4">
                     <i className="nc-icon nc-settings-gear-65" />
                   </div>
-                  <CardBody>
+                  <div className="card-body">
                     <div className="author text-left">
                       <CardTitle tag="h4">
                         Customized Services
@@ -195,15 +216,20 @@ function LandingPage() {
                       consulting role or work as a fully integrated part of your
                       business.
                     </p>
-                  </CardBody>
-                </Card>
+                  </div>
+                </motion.div>
               </Col>
               <Col md="6">
-                <Card className="card-profile">
+                <motion.div
+                  style={{
+                    translateX: servicesCard3,
+                  }}
+                  className="card card-profile"
+                >
                   <div className="card-avatar icon icon-success pt-4">
                     <i className="nc-icon nc-ruler-pencil" />
                   </div>
-                  <CardBody>
+                  <div className="card-body">
                     <div className="author text-left">
                       <CardTitle tag="h4">Project Migration Services</CardTitle>
                     </div>
@@ -214,15 +240,18 @@ function LandingPage() {
                       experience to make sure the risk is minimized and the
                       project goes as smoothly as possible.
                     </p>
-                  </CardBody>
-                </Card>
+                  </div>
+                </motion.div>
               </Col>
               <Col md="6">
-                <Card className="card-profile">
+                <motion.div
+                  style={{ translateX: servicesCard4 }}
+                  className="card card-profile"
+                >
                   <div className="card-avatar icon icon-success pt-4">
                     <i className="nc-icon nc-laptop" />
                   </div>
-                  <CardBody>
+                  <div className="card-body">
                     <div className="author text-left">
                       <CardTitle tag="h4">IT administration services</CardTitle>
                     </div>
@@ -233,8 +262,8 @@ function LandingPage() {
                       scheduled health checks on your servers and other hardware
                       to reduce the potential for breakdown.
                     </p>
-                  </CardBody>
-                </Card>
+                  </div>
+                </motion.div>
               </Col>
             </Row>
           </Container>

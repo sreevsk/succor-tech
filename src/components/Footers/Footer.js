@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.scss";
-// reactstrap components
-import { Row, Container, Col, UncontrolledTooltip } from "reactstrap";
+import { motion } from "framer-motion";
+
+import { Row, Container, UncontrolledTooltip } from "reactstrap";
 
 function Footer() {
   return (
@@ -11,7 +12,13 @@ function Footer() {
           Let's get in touch on any of these platforms.
         </h2>
         <Row className="icon-footer pt-3 justify-content-center">
-          <Col md="1">
+          <motion.div
+            initial={{ scale: 0.5, x: 100, y: 50 }}
+            whileInView={{ scale: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            class="col-md-1"
+          >
             <a
               target="_blank"
               href="https://twitter.com/NascentInc"
@@ -23,8 +30,14 @@ function Footer() {
             <UncontrolledTooltip placement="bottom" target="twitter" delay={0}>
               Follow us
             </UncontrolledTooltip>
-          </Col>
-          <Col md="1">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.5, x: 60, y: 50 }}
+            whileInView={{ scale: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            class="col-md-1"
+          >
             <a
               target="_blank"
               href="https://www.facebook.com/Nascenttechnologiesinc"
@@ -36,8 +49,14 @@ function Footer() {
             <UncontrolledTooltip placement="bottom" target="facebook" delay={0}>
               Like us
             </UncontrolledTooltip>
-          </Col>
-          <Col md="1">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.5, x: 10, y: 50 }}
+            whileInView={{ scale: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            class="col-md-1"
+          >
             <a
               target="_blank"
               href="https://www.instagram.com/nascenttechnologiesinc/"
@@ -49,8 +68,14 @@ function Footer() {
             <UncontrolledTooltip placement="bottom" target="insta" delay={0}>
               Follow us
             </UncontrolledTooltip>
-          </Col>
-          <Col md="1">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.5, x: -30, y: 50 }}
+            whileInView={{ scale: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            class="col-md-1"
+          >
             <a
               target="_blank"
               href="https://www.linkedin.com/company/nascent-technologies-inc"
@@ -62,8 +87,14 @@ function Footer() {
             <UncontrolledTooltip placement="bottom" target="linkedin" delay={0}>
               Connect with us
             </UncontrolledTooltip>
-          </Col>
-          <Col md="1">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.5, x: -70, y: 50 }}
+            whileInView={{ scale: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            class="col-md-1"
+          >
             <a
               target="_blank"
               href="https://www.youtube.com/channel/UCh4vUkRnqnQZUd03ZbL_z1Q"
@@ -75,14 +106,20 @@ function Footer() {
             <UncontrolledTooltip placement="bottom" target="youtube" delay={0}>
               Subscribe to us
             </UncontrolledTooltip>
-          </Col>
+          </motion.div>
         </Row>
         <Row>
-          <div className="credits ml-auto">
+          <motion.div
+            initial={{ scale: 0.5, x: 100 }}
+            whileInView={{ scale: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="credits ml-auto"
+          >
             <span className="copyright text-dark" style={{ fontSize: "1rem" }}>
               © 2021 Nascent Technologies Inc. All Rights Reserved.
             </span>
-          </div>
+          </motion.div>
         </Row>
       </Container>
       <div className="developer" style={{ display: "none" }}>

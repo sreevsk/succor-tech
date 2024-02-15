@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import "./Supports.scss";
 import { Container, Row, Col } from "reactstrap";
 
@@ -21,9 +21,15 @@ function Supports() {
       <div className="supports-section section text-center pt-3 pb-1 custom-section">
         <Container>
           <h2 className="title">Supports</h2>
-          <Row className="pt-3">
+          <Row>
             <Col md="6">
-              <p className="text-left pt-4">
+              <motion.p
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-left pt-4"
+              >
                 An activity required for successful execution of a product or
                 program or process is known as Support service. The support
                 services are managed by a separate department. It is extremely
@@ -33,10 +39,17 @@ function Supports() {
                 services are not just limited to phone calls nowadays email,
                 chat, web forms, and social communications, as well as
                 self-service support sites.
-              </p>
+              </motion.p>
               <div className="list-div">
                 <ol style={customStylesList} role="list" className="pl-0">
-                  <li style={li_1}>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-left pt-4"
+                    style={li_1}
+                  >
                     <Row>
                       <Col md="1" className="icon">
                         <i className="nc-icon nc-cloud-upload-94" />
@@ -45,8 +58,14 @@ function Supports() {
                         <h3 className="m-0">Support for Cloud</h3>
                       </Col>
                     </Row>
-                  </li>
-                  <li style={li_2}>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    style={li_2}
+                  >
                     <Row>
                       <Col md="1" className="icon">
                         <i className="nc-icon nc-tile-56" />
@@ -57,8 +76,14 @@ function Supports() {
                         </h3>
                       </Col>
                     </Row>
-                  </li>
-                  <li style={li_3}>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    style={li_3}
+                  >
                     <Row>
                       <Col md="1" className="icon">
                         <i className="nc-icon nc-laptop" />
@@ -67,18 +92,22 @@ function Supports() {
                         <h3 className="m-0">Super for Data Center</h3>
                       </Col>
                     </Row>
-                  </li>
+                  </motion.li>
                 </ol>
               </div>
             </Col>
             <Col md="6">
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className="support-image"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/promo.png") + ")",
                 }}
-              ></div>
+              ></motion.div>
             </Col>
           </Row>
         </Container>

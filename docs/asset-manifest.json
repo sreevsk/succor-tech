@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.44c80e7a.css",
-    "main.js": "./static/js/main.c92c5738.js",
+    "main.css": "./static/css/main.cd96602f.css",
+    "main.js": "./static/js/main.8e1a8939.js",
     "static/media/temp-hire.png": "./static/media/temp-hire.c56f4a54f757c4f6a070.png",
     "static/media/offshore-hire.png": "./static/media/offshore-hire.9c8b6a0682b2ea67c38f.png",
     "static/media/full-time-hire.jpg": "./static/media/full-time-hire.cab084a178f9b4fbc0a6.jpg",
@@ -16,7 +16,7 @@
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.44c80e7a.css",
-    "static/js/main.c92c5738.js"
+    "static/css/main.cd96602f.css",
+    "static/js/main.8e1a8939.js"
   ]
 }

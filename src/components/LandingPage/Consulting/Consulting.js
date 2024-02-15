@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import data from "../../../assets/properties/data.json";
 import "./Consulting.scss";
 import { Container, Row, Col } from "reactstrap";
@@ -9,35 +9,47 @@ function Consulting() {
     <>
       <div className="consulting-section section text-center pt-2 pb-2 custom-section">
         <Container className="p-0">
-          <h2 className="title">Consulting</h2>
-          <p className="description text-left text-black">
-            <b>{data.title}</b> understands the growing need of employment and
-            the choices of Candidates when it comes to choosing and picking up a
-            Professional Career; <b>{data.title}</b> is open and has no
-            restrictions related to or subject to any territorial limitations or
-            other wise and widely assist all Candidates located any where to
-            pick a desired Professional Career in their desired location with
-            their custom made package or work preferences. <b>{data.title} </b>
-            assists its clients in their Staffing Solutions and Services by
-            giving them a range of staffing options like temporary staffing,
-            contractual staffing and long term staffing. It helps the client to
-            recruit people with strength of character and integrity who
-            understands the goals, familiar with the nature of business using
-            its expertise in the process of identifying and recommending the
-            candidates to the clients, simultaneously, adhering to the clients’
-            detailed requirements and the candidates availability and
-            sensitivity of acceptance in taking up the offer.{" "}
-            <b>{data.title} </b>
-            also supports its clients on both on and off shore augmentation.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="title">Consulting</h2>
+            <p className="description text-left text-black">
+              <b>{data.title}</b> understands the growing need of employment and
+              the choices of Candidates when it comes to choosing and picking up
+              a Professional Career; <b>{data.title}</b> is open and has no
+              restrictions related to or subject to any territorial limitations
+              or other wise and widely assist all Candidates located any where
+              to pick a desired Professional Career in their desired location
+              with their custom made package or work preferences.{" "}
+              <b>{data.title} </b>
+              assists its clients in their Staffing Solutions and Services by
+              giving them a range of staffing options like temporary staffing,
+              contractual staffing and long term staffing. It helps the client
+              to recruit people with strength of character and integrity who
+              understands the goals, familiar with the nature of business using
+              its expertise in the process of identifying and recommending the
+              candidates to the clients, simultaneously, adhering to the
+              clients’ detailed requirements and the candidates availability and
+              sensitivity of acceptance in taking up the offer.{" "}
+              <b>{data.title} </b>
+              also supports its clients on both on and off shore augmentation.
+            </p>
+          </motion.div>
           <Row className="pt-5">
             <Col md="6">
-              <div
-                className="support-card"
+              <motion.div
+                initial={{ opacity: 0, scale: 1.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/full-time-hire.jpg") + ")",
                 }}
+                className="support-card"
               >
                 <div className="card-content">
                   <h2>Fulltime hire</h2>
@@ -53,10 +65,14 @@ function Consulting() {
                     they are used to fill part-time positions as well.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </Col>
             <Col md="6">
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 1.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className="support-card"
                 style={{
                   backgroundImage:
@@ -79,12 +95,16 @@ function Consulting() {
                     invaluable “working interview”.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </Col>
           </Row>
           <Row className="pt-5">
             <Col md="6">
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 1.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className="support-card"
                 style={{
                   backgroundImage:
@@ -103,10 +123,14 @@ function Consulting() {
                     services through our offshore development facilities.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </Col>
             <Col md="6">
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 1.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 className="support-card"
                 style={{
                   backgroundImage:
@@ -124,7 +148,7 @@ function Consulting() {
                     prorated fee structure.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </Col>
           </Row>
         </Container>
