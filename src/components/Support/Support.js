@@ -1,8 +1,9 @@
 import React from "react";
 import "./Support.scss";
-import data from "../../assets/properties/data.json";
 import supportData from "../../assets/properties/support-data.json";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
+import { motion, useScroll } from "framer-motion";
+import CustomScrollTranslate from "components/LandingPage/CustomScrollTransform";
 
 function Support() {
   document.documentElement.classList.remove("nav-open");
@@ -12,10 +13,17 @@ function Support() {
       document.body.classList.remove("landing-page");
     };
   });
+
+  const supportTranslateCard1 = CustomScrollTranslate(-4, 4, 0, 1);
+  const supportTranslateCard2 = CustomScrollTranslate(-2, 2, 0, 1);
   return (
     <>
       <div className="support-section">
-        <div
+        <motion.div
+          initial={{ y: -150 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
           className="section-dark page-header page-header-xs"
           style={{
             backgroundImage:
@@ -28,9 +36,21 @@ function Support() {
               backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
             }}
           />
-        </div>
-        <div className="section profile-content pb-4">
-          <Container>
+        </motion.div>
+        <motion.div
+          initial={{ y: 150 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          className="section profile-content pb-4"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 1.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="container"
+          >
             <div className="owner">
               <div className="avatar"></div>
               <div className="name">
@@ -66,7 +86,11 @@ function Support() {
                     className="pl-0"
                   >
                     {supportData.map((item, index) => (
-                      <li
+                      <motion.li
+                        initial={{ scale: 0.5, x: -500, y: 100 }}
+                        whileInView={{ scale: 1, x: 0, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
                         key={index + 1}
                         style={{
                           "--i": index + 1,
@@ -84,79 +108,86 @@ function Support() {
                             <h3 className="m-0">{item.text}</h3>
                           </Col>
                         </Row>
-                      </li>
+                      </motion.li>
                     ))}
                   </ol>
                 </div>
               </Col>
             </Row>
-          </Container>
-        </div>
+          </motion.div>
+        </motion.div>
         <section className="py-4 section-bubble2">
           <div className="container op-team-support pb-0">
-            <h2 className="title text-white">Operational Team Support</h2>
-            <p className="pt-1 text-white">
-              In today’s competitive environment, you face ever-increasing
-              demands from your business. However, if you are like many other IT
-              organizations, your critical IT resources are consumed with
-              day-to-day operations – or you don’t have the engineering skills
-              needed to deal with frequent changes that span complex,
-              interconnected technologies. With NascentTechnologies Operate
-              Services, you receive high-touch operational support from a
-              trusted partner – freeing your resources to drive innovation.
-            </p>
-            <Row className="pt-4">
-              <Col md="3">
-                <div className="text-center text-white">
-                  <i className="nc-icon nc-chat-33" />
-                </div>
-                <div className="text pt-2">
-                  <p>Unified Communications</p>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="text-center text-white">
-                  <i className="nc-icon nc-email-85" />
-                </div>
-                <div className="text pt-2">
-                  <p>Contact Center</p>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="text-center text-white">
-                  <i className="nc-icon nc-laptop" />
-                </div>
-                <div className="text pt-2">
-                  <p>Server Management</p>
-                </div>
-              </Col>
-            </Row>
-            <Row className="pt-5">
-              <Col md="3">
-                <div className="text-center text-white">
-                  <i className="nc-icon nc-vector" />
-                </div>
-                <div className="text pt-2">
-                  <p>Networking</p>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="text-center text-white">
-                  <i className="nc-icon nc-lock-circle-open" />
-                </div>
-                <div className="text pt-2">
-                  <p>Security</p>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="text-center text-white">
-                  <i className="nc-icon nc-tile-56" />
-                </div>
-                <div className="text pt-2">
-                  <p>Data Center</p>
-                </div>
-              </Col>
-            </Row>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="title text-white">Operational Team Support</h2>
+              <p className="pt-1 text-white">
+                In today’s competitive environment, you face ever-increasing
+                demands from your business. However, if you are like many other
+                IT organizations, your critical IT resources are consumed with
+                day-to-day operations – or you don’t have the engineering skills
+                needed to deal with frequent changes that span complex,
+                interconnected technologies. With NascentTechnologies Operate
+                Services, you receive high-touch operational support from a
+                trusted partner – freeing your resources to drive innovation.
+              </p>
+              <Row className="pt-4">
+                <Col md="3">
+                  <div className="text-center text-white">
+                    <i className="nc-icon nc-chat-33" />
+                  </div>
+                  <div className="text pt-2">
+                    <p>Unified Communications</p>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="text-center text-white">
+                    <i className="nc-icon nc-email-85" />
+                  </div>
+                  <div className="text pt-2">
+                    <p>Contact Center</p>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="text-center text-white">
+                    <i className="nc-icon nc-laptop" />
+                  </div>
+                  <div className="text pt-2">
+                    <p>Server Management</p>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="pt-5">
+                <Col md="3">
+                  <div className="text-center text-white">
+                    <i className="nc-icon nc-vector" />
+                  </div>
+                  <div className="text pt-2">
+                    <p>Networking</p>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="text-center text-white">
+                    <i className="nc-icon nc-lock-circle-open" />
+                  </div>
+                  <div className="text pt-2">
+                    <p>Security</p>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="text-center text-white">
+                    <i className="nc-icon nc-tile-56" />
+                  </div>
+                  <div className="text pt-2">
+                    <p>Data Center</p>
+                  </div>
+                </Col>
+              </Row>
+            </motion.div>
             <p className="pt-4 text-white">
               Quality based service delivery methodology built on best practices
               gained from ITIL framework for service operations and more than
@@ -164,7 +195,10 @@ function Support() {
             </p>
             <Row className="pt-4">
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ scale: supportTranslateCard1 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="fa fa-exclamation-triangle" />
                   </div>
@@ -179,10 +213,13 @@ function Support() {
                     <br />
                     <br />
                   </div>
-                </div>
+                </motion.div>
               </Col>
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ scale: supportTranslateCard1 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="fa fa-puzzle-piece" />
                   </div>
@@ -197,10 +234,13 @@ function Support() {
                     <br />
                     <br />
                   </div>
-                </div>
+                </motion.div>
               </Col>
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ scale: supportTranslateCard1 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="fa fa-phone" />
                   </div>
@@ -215,12 +255,15 @@ function Support() {
                     <br />
                     <br />
                   </div>
-                </div>
+                </motion.div>
               </Col>
             </Row>
             <Row className="pt-2">
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ scale: supportTranslateCard2 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="fa fa-server" />
                   </div>
@@ -235,10 +278,13 @@ function Support() {
                     <br />
                     <br />
                   </div>
-                </div>
+                </motion.div>
               </Col>
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ scale: supportTranslateCard2 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="fa fa-database" />
                   </div>
@@ -253,10 +299,13 @@ function Support() {
                     <br />
                     <br />
                   </div>
-                </div>
+                </motion.div>
               </Col>
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  style={{ scale: supportTranslateCard2 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="fa fa-shield" />
                   </div>
@@ -271,13 +320,19 @@ function Support() {
                     </p>
                     <br />
                   </div>
-                </div>
+                </motion.div>
               </Col>
             </Row>
           </div>
         </section>
         <section className="section-bubble3">
-          <div className="pb-0 container op-team-support">
+          <motion.div
+            initial={{ opacity: 0, scale: 2 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="pb-0 container op-team-support"
+          >
             <h2 className="title text-white">Monitoring Team Support</h2>
             <p className="pt-1">
               Like many IT operations teams, you don’t lack monitoring. In fact,
@@ -329,7 +384,7 @@ function Support() {
                 </div>
               </Col>
             </Row>
-          </div>
+          </motion.div>
         </section>
       </div>
     </>

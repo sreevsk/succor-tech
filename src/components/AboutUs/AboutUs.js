@@ -1,13 +1,19 @@
 import React from "react";
 import "./AboutUs.scss";
 import data from "../../assets/properties/data.json";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
+import { motion } from "framer-motion";
 
 function AboutUs() {
   return (
     <>
       <div className="about-us-section">
-        <div
+        <motion.div
+          initial={{ y: -150 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          class="col-md-1"
           className="section-dark page-header page-header-xs"
           style={{
             backgroundImage:
@@ -20,9 +26,21 @@ function AboutUs() {
               backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
             }}
           />
-        </div>
-        <div className="section-bubble1 profile-content">
-          <Container>
+        </motion.div>
+        <motion.div
+          initial={{ y: 150 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          className="section-bubble1 profile-content"
+        >
+          <motion.div
+            className="container"
+            initial={{ opacity: 0, scale: 1.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="owner">
               <div className="avatar"></div>
               <div className="name">
@@ -53,10 +71,16 @@ function AboutUs() {
                 <br />
               </Col>
             </Row>
-          </Container>
-        </div>
+          </motion.div>
+        </motion.div>
         <section className="py-4 section-bubble2">
-          <div className="container">
+          <motion.div
+            initial={{ opacity: 0, scale: 1.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="container"
+          >
             <p className="pt-3 text-white">
               <b>{data.title}</b> understands the business needs and believe
               that every need is Unique and therefore, bear in mind all the
@@ -84,7 +108,7 @@ function AboutUs() {
               and experience plays the role in ensuring that NascentTechnologies
               would be the right asset to the clients.
             </p>
-          </div>
+          </motion.div>
         </section>
       </div>
     </>
