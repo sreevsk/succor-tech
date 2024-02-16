@@ -1,0 +1,19 @@
+.it-consulting-section {
+  .page-header {
+    background-position: center -137px;
+    min-height: 40vh !important;
+  }
+  .custom-card {
+    border-radius: 10px;
+    .service-icon {
+      display: grid;
+      font-size: 100px;
+      opacity: 0.1;
+      padding-left: 10px;
+      color: #607d8b;
+    }
+    .col-md-11 {
+      margin-left: -50px;
+    }
+  }
+}

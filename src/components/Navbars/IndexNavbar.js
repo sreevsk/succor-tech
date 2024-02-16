@@ -14,7 +14,6 @@ import {
   Collapse,
   Navbar,
   NavItem,
-  NavLink,
   Nav,
   Container,
 } from "reactstrap";
@@ -92,7 +91,7 @@ function IndexNavbar() {
         >
           <Nav navbar>
             <MotionConfig
-              whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+              whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
               whileTap={{ y: 3 }}
             >
               <NavItem>
@@ -151,23 +150,14 @@ function IndexNavbar() {
                   </DropdownToggle>
                 </motion.div>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    IT Consulting Services
+                  <DropdownItem>
+                    <Link to="/it-consulting">IT Consulting Services</Link>
                   </DropdownItem>
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    IT Project Services
+                  <DropdownItem>
+                    <Link to="/it-project">IT Project Services</Link>
                   </DropdownItem>
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    GIS Services
+                  <DropdownItem>
+                    <Link to="/gis-services"> GIS Services</Link>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -228,7 +218,11 @@ function IndexNavbar() {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink style={styles.nav_link}>
+                <Link
+                  className="nav-link"
+                  to="/contact-us"
+                  style={styles.nav_link}
+                >
                   <motion.div
                     initial={{ opacity: 0, scale: 0.6 }}
                     animate={{
@@ -239,7 +233,7 @@ function IndexNavbar() {
                   >
                     Contact Us
                   </motion.div>
-                </NavLink>
+                </Link>
               </NavItem>
             </MotionConfig>
           </Nav>

@@ -13,7 +13,6 @@ function AboutUs() {
           whileInView={{ y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
-          class="col-md-1"
           className="section-dark page-header page-header-xs"
           style={{
             backgroundImage:

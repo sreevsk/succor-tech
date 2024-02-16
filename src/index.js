@@ -37,6 +37,10 @@ import AboutUs from "components/AboutUs/AboutUs";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import Footer from "components/Footers/Footer";
 import Support from "components/Support/Support";
+import ContactUs from "components/ContactUs/ContactUs";
+import ItConsultingServices from "components/ItConsultingServices/ItConsultingServices";
+import ItProjectServices from "components/ItProjectServices/ItProjectServices";
+import GISServices from "components/GISServices/GISServices";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function ScrollToTop() {
@@ -57,6 +61,10 @@ root.render(
       <Route path="/home" element={<Index />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/support" element={<Support />} />
+      <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/it-consulting" element={<ItConsultingServices />} />
+      <Route path="/it-project" element={<ItProjectServices />} />
+      <Route path="/gis-services" element={<GISServices />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
     <Footer />

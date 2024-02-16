@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../../assets/properties/data.json";
 import "./LandingPage.scss";
 import Consulting from "./Consulting/Consulting";
@@ -10,15 +10,7 @@ import CustomScrollTranslate from "./CustomScrollTransform";
 import { Link } from "react-router-dom";
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardTitle,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import { Button, CardTitle, Container, Row, Col } from "reactstrap";
 
 function LandingPage() {
   const prodTranslateCard1 = CustomScrollTranslate(450, -2700, 0, 450);
@@ -36,6 +28,11 @@ function LandingPage() {
       document.body.classList.remove("profile-page");
     };
   });
+
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered3, setIsHovered3] = useState(false);
+
   return (
     <>
       <div className="main">
@@ -60,7 +57,10 @@ function LandingPage() {
                   </h5>
                   <br />
                   <Link to="/about-us">
-                    <Button className="btn-round" color="info">
+                    <Button
+                      className="btn-round btn btn-outline-info"
+                      color="info"
+                    >
                       About Us
                     </Button>
                   </Link>
@@ -69,9 +69,12 @@ function LandingPage() {
             </Row>
             <br />
             <br />
-            <Row className="pt-2">
+            <Row className="all-services pt-2">
               <Col md="4">
                 <motion.div
+                  onMouseEnter={() => setIsHovered1(true)}
+                  onMouseLeave={() => setIsHovered1(false)}
+                  whileHover={{ scale: 1.02 }}
                   style={{ translateX: prodTranslateCard1 }}
                   className="info card"
                 >
@@ -85,18 +88,27 @@ function LandingPage() {
                       advantages to the clients in terms of scalability, risk
                       mitigation, cost efficiency and core focusing.
                     </p>
-                    <Button
-                      className="btn-link pb-3"
+                    <motion.button
+                      animate={{
+                        letterSpacing: isHovered1 ? "3px" : "1px",
+                        fontWeight: isHovered1 ? 600 : 500,
+                      }}
+                      className="btn btn-info btn-link pb-3"
                       color="info"
                       href="#pablo"
                     >
                       See more
-                    </Button>
+                    </motion.button>
                   </div>
                 </motion.div>
               </Col>
               <Col md="4">
-                <div className="info card">
+                <motion.div
+                  onMouseEnter={() => setIsHovered2(true)}
+                  onMouseLeave={() => setIsHovered2(false)}
+                  whileHover={{ scale: 1.02 }}
+                  className="info card"
+                >
                   <div className="pt-3 icon icon-info">
                     <i className="nc-icon nc-bulb-63" />
                   </div>
@@ -108,18 +120,25 @@ function LandingPage() {
                       scenario and the technology available.
                     </p>
                     <br />
-                    <Button
-                      className="btn-link pb-3"
+                    <motion.button
+                      animate={{
+                        letterSpacing: isHovered2 ? "3px" : "1px",
+                        fontWeight: isHovered2 ? 600 : 500,
+                      }}
+                      className="btn btn-info btn-link pb-3"
                       color="info"
                       href="#pablo"
                     >
                       See more
-                    </Button>
+                    </motion.button>
                   </div>
-                </div>
+                </motion.div>
               </Col>
               <Col md="4">
                 <motion.div
+                  onMouseEnter={() => setIsHovered3(true)}
+                  onMouseLeave={() => setIsHovered3(false)}
+                  whileHover={{ scale: 1.02 }}
                   style={{ translateX: prodTranslateCard3 }}
                   className="info card"
                 >
@@ -134,20 +153,24 @@ function LandingPage() {
                       anti-viruses and constant monitoring.
                     </p>
                     <br />
-                    <Button
-                      className="btn-link pb-3"
+                    <motion.button
+                      animate={{
+                        letterSpacing: isHovered3 ? "3px" : "1px",
+                        fontWeight: isHovered3 ? 600 : 500,
+                      }}
+                      className="btn btn-info btn-link pb-3"
                       color="info"
                       href="#pablo"
                     >
                       See more
-                    </Button>
+                    </motion.button>
                   </div>
                 </motion.div>
               </Col>
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center pt-3 custom-section">
+        <div className="section text-center pt-3 section-services">
           <Container>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -155,8 +178,8 @@ function LandingPage() {
               transition={{ duration: 0.5, type: "spring" }}
               viewport={{ once: true }}
             >
-              <h2 className="title">Services</h2>
-              <p className="description text-left">
+              <h2 className="title text-white">Services</h2>
+              <p className="description text-left text-white">
                 Explore tailored IT solutions at <b>{data.title}</b>. From
                 strategic planning to system integration, cybersecurity, and
                 digital transformation, our services are designed to propel your
@@ -170,6 +193,7 @@ function LandingPage() {
                   style={{
                     translateX: servicesCard1,
                   }}
+                  whileHover={{ scale: 1.02 }}
                   className="card card-profile"
                 >
                   <div className="card-avatar icon icon-success pt-4">
@@ -196,6 +220,7 @@ function LandingPage() {
                   style={{
                     translateX: servicesCard2,
                   }}
+                  whileHover={{ scale: 1.02 }}
                   className="card card-profile"
                 >
                   <div className="card-avatar icon icon-success pt-4">
@@ -224,6 +249,7 @@ function LandingPage() {
                   style={{
                     translateX: servicesCard3,
                   }}
+                  whileHover={{ scale: 1.02 }}
                   className="card card-profile"
                 >
                   <div className="card-avatar icon icon-success pt-4">
@@ -245,6 +271,7 @@ function LandingPage() {
               </Col>
               <Col md="6">
                 <motion.div
+                  whileHover={{ scale: 1.02 }}
                   style={{ translateX: servicesCard4 }}
                   className="card card-profile"
                 >

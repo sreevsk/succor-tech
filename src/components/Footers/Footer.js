@@ -16,12 +16,14 @@ function Footer() {
             initial={{ scale: 0.5, x: 100, y: 50 }}
             whileInView={{ scale: 1, x: 0, y: 0 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
-            class="col-md-1"
+            className="col-md-1"
           >
             <a
               target="_blank"
               href="https://twitter.com/NascentInc"
+              rel="noreferrer"
               id="twitter"
               style={{ color: "#1d9bf0" }}
             >
@@ -35,12 +37,14 @@ function Footer() {
             initial={{ scale: 0.5, x: 60, y: 50 }}
             whileInView={{ scale: 1, x: 0, y: 0 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
-            class="col-md-1"
+            className="col-md-1"
           >
             <a
               target="_blank"
               href="https://www.facebook.com/Nascenttechnologiesinc"
+              rel="noreferrer"
               id="facebook"
               style={{ color: "#0866ff" }}
             >
@@ -54,12 +58,14 @@ function Footer() {
             initial={{ scale: 0.5, x: 10, y: 50 }}
             whileInView={{ scale: 1, x: 0, y: 0 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
-            class="col-md-1"
+            className="col-md-1"
           >
             <a
               target="_blank"
               href="https://www.instagram.com/nascenttechnologiesinc/"
+              rel="noreferrer"
               id="insta"
               style={{ color: "#c93a99" }}
             >
@@ -73,12 +79,14 @@ function Footer() {
             initial={{ scale: 0.5, x: -30, y: 50 }}
             whileInView={{ scale: 1, x: 0, y: 0 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
-            class="col-md-1"
+            className="col-md-1"
           >
             <a
               target="_blank"
               href="https://www.linkedin.com/company/nascent-technologies-inc"
+              rel="noreferrer"
               id="linkedin"
               style={{ color: "#0a66c2" }}
             >
@@ -92,12 +100,14 @@ function Footer() {
             initial={{ scale: 0.5, x: -70, y: 50 }}
             whileInView={{ scale: 1, x: 0, y: 0 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
-            class="col-md-1"
+            className="col-md-1"
           >
             <a
               target="_blank"
               href="https://www.youtube.com/channel/UCh4vUkRnqnQZUd03ZbL_z1Q"
+              rel="noreferrer"
               id="youtube"
               style={{ color: "#f00" }}
             >
@@ -113,6 +123,7 @@ function Footer() {
             initial={{ scale: 0.5, x: 100 }}
             whileInView={{ scale: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
             className="credits ml-auto"
           >

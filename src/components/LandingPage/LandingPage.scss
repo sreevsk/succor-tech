@@ -1,11 +1,16 @@
 .section .card-profile {
   margin-top: 50px;
 }
-
-.custom-section {
+.all-services {
+  .btn.btn-info {
+    font-weight: 500;
+  }
+}
+.section-services {
+  background: #343a40c9;
   .card {
-    box-shadow: 0 6px 10px -4px #6c757d;
-    background-color: #0b1011;
+    box-shadow: 0 6px 10px -4px #212529;
+    background-color: #343a40;
     .card-title {
       color: white;
     }

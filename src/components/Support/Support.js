@@ -2,7 +2,7 @@ import React from "react";
 import "./Support.scss";
 import supportData from "../../assets/properties/support-data.json";
 import { Row, Col } from "reactstrap";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import CustomScrollTranslate from "components/LandingPage/CustomScrollTransform";
 
 function Support() {
@@ -82,13 +82,13 @@ function Support() {
                     style={{
                       "--length": supportData.length,
                     }}
-                    role="list"
                     className="pl-0"
                   >
                     {supportData.map((item, index) => (
                       <motion.li
                         initial={{ scale: 0.5, x: -500, y: 100 }}
                         whileInView={{ scale: 1, x: 0, y: 0 }}
+                        whileHover={{ scale: 1.03 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                         key={index + 1}

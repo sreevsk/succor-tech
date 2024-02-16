@@ -41,11 +41,12 @@ function Supports() {
                 self-service support sites.
               </motion.p>
               <div className="list-div">
-                <ol style={customStylesList} role="list" className="pl-0">
+                <ol style={customStylesList} className="pl-0">
                   <motion.li
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.02 }}
                     viewport={{ once: true }}
                     className="text-left pt-4"
                     style={li_1}
@@ -63,6 +64,7 @@ function Supports() {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
+                    whileHover={{ scale: 1.02 }}
                     viewport={{ once: true }}
                     style={li_2}
                   >
@@ -81,6 +83,7 @@ function Supports() {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
+                    whileHover={{ scale: 1.02 }}
                     viewport={{ once: true }}
                     style={li_3}
                   >
