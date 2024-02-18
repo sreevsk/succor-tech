@@ -150,15 +150,15 @@ function IndexNavbar() {
                   </DropdownToggle>
                 </motion.div>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                  <DropdownItem>
-                    <Link to="/it-consulting">IT Consulting Services</Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/it-project">IT Project Services</Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/gis-services"> GIS Services</Link>
-                  </DropdownItem>
+                  <Link className="dropdown-item" to="/it-consulting">
+                    IT Consulting Services
+                  </Link>
+                  <Link className="dropdown-item" to="/it-project">
+                    IT Project Services
+                  </Link>
+                  <Link className="dropdown-item" to="/gis-services">
+                    IT Consulting Services
+                  </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>

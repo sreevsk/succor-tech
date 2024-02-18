@@ -61,11 +61,11 @@ function ItConsultingServices() {
           >
             <div className="owner">
               <div className="name">
-                <h4 className="title mb-2">
+                <h4 className="font-weight-bolder mb-2">
                   IT Consulting services
                   <br />
                 </h4>
-                <h6 className="description pb-1">
+                <h6 className="font-weight-normal pb-1">
                   Exploring our creative journey and exceptional work.
                 </h6>
               </div>
@@ -99,6 +99,7 @@ function ItConsultingServices() {
 
             {services.map((item, index) => (
               <motion.div
+                key={item.title}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
                 whileHover={{

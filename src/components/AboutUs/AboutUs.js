@@ -43,10 +43,10 @@ function AboutUs() {
             <div className="owner">
               <div className="avatar"></div>
               <div className="name">
-                <h4 className="title mb-2">
+                <h4 className="font-weight-bolder mb-2">
                   About Us <br />
                 </h4>
-                <h6 className="description pb-1">
+                <h6 className="font-weight-normal pb-1">
                   Passionate professionals driving innovation for a better
                   world.
                 </h6>

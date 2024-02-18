@@ -87,10 +87,27 @@ $section5-bg-color: #333333;
 }
 
 .section-bubble5 {
-  background: $section5-bg-color;
-  color: white;
+  @include section-bubble-with-colors(
+    b,
+    $section4-bg-color,
+    $section5-bg-color
+  );
+}
 
-  text-align: center;
+.section-bubble6 {
+  @include section-bubble-with-colors(
+    b,
+    $section4-bg-color,
+    $section5-bg-color
+  );
+}
+
+.section-bubble7 {
+  @include section-bubble-with-colors(
+    b,
+    $section4-bg-color,
+    $section5-bg-color
+  );
 }
 
 .section-bubble_type-a {

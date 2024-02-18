@@ -1,0 +1,36 @@
+{
+  "gisItems": [
+    "Transportation; road, rail, shipping, ports and logistics companies",
+    "Municipalities, councils and local governments",
+    "Town planners, surveyors, developers, builders, and engineers",
+    "Water and drainage, electricity, telephone, and gas utilities",
+    "Emergency services, police, health service planners",
+    "Scientists, environmental protection and natural resource management",
+    "Franchise stores and restaurants, marketing companies"
+  ],
+  "dpItems": [
+    "aerial triangulations for aerial photos",
+    "stereo compilation",
+    "topographic / planimetric mapping and updating",
+    "dem / dtm / contour generation",
+    "orthophoto generation / mosaicing / tiling"
+  ],
+  "uavItems": [
+    "UAV services for road & railway network",
+    "UAV services for local authority / municipalities",
+    "UAV services for mine sites",
+    "UAV services for agriculture",
+    "videography"
+  ],
+  "alItems": [
+    "agriculture & forestry",
+    "dam & reservoir",
+    "flood study",
+    "railways",
+    "mine site",
+    "pipelines",
+    "slope analysis",
+    "telecommunication & urban planning",
+    "transmission lines"
+  ]
+}

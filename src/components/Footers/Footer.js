@@ -123,7 +123,6 @@ function Footer() {
             initial={{ scale: 0.5, x: 100 }}
             whileInView={{ scale: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
             viewport={{ once: true }}
             className="credits ml-auto"
           >

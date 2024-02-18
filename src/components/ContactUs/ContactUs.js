@@ -41,10 +41,10 @@ function ContactUs() {
           >
             <div className="owner">
               <div className="name">
-                <h4 className="title mb-2">
+                <h4 className="font-weight-bolder mb-2">
                   Get In Touch !<br />
                 </h4>
-                <h6 className="description pb-1">
+                <h6 className="font-weight-normal pb-1">
                   We are looking forward to start a project with you!
                 </h6>
               </div>

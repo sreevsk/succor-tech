@@ -1,9 +1,12 @@
 import React from "react";
-import AnimatedTextCharacter from "components/Shared/AnimtedTextCharacter";
 import { Container } from "reactstrap";
 import { motion } from "framer-motion";
+import CustomScrollTranslate from "components/LandingPage/CustomScrollTransform";
 
 function IndexHeader() {
+  const scaleTranslate = CustomScrollTranslate(1, 10, 0, 15);
+  const opacityTranslate = CustomScrollTranslate(1, -30, 0, 15);
+  const yTranslate = CustomScrollTranslate(0, -50 * 100, -100, 0);
   return (
     <>
       <motion.div
@@ -19,22 +22,34 @@ function IndexHeader() {
         <div className="content-center">
           <Container>
             <div className="title-brand" style={{ maxWidth: 780 + "px" }}>
-              <AnimatedTextCharacter
-                text="Succor"
-                className="presentation-title text-center font-weight-bolder"
-                style={{ fontSize: "6rem" }}
-              />
-              <AnimatedTextCharacter
-                text="Technologies"
-                className="presentation-title text-center font-weight-bolder"
-                style={{ fontSize: "6rem" }}
-              />
-              {/* <h1 className="presentation-title">Technologies</h1> */}
+              <motion.h1
+                style={{
+                  scale: scaleTranslate,
+                  opacity: opacityTranslate,
+                  translateY: yTranslate,
+                }}
+                className="presentation-title font-weight-bolder"
+              >
+                Succor
+              </motion.h1>
+              <motion.h1
+                style={{
+                  scale: scaleTranslate,
+                  opacity: opacityTranslate,
+                  translateY: yTranslate,
+                }}
+                className="presentation-title "
+              >
+                Technologies
+              </motion.h1>
             </div>
             <motion.h2
               initial={{ opacity: 0, scale: 0.6 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.7 }}
+              style={{
+                opacity: opacityTranslate,
+              }}
               className="presentation-subtitle "
             >
               Virtual Bridge between Job Seekers, Project Developers, and
