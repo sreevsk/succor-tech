@@ -223,7 +223,7 @@ function GISServices() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
-                  className="row custom-card"
+                  className="row border-bottom custom-card"
                 >
                   <motion.div
                     animate={{
@@ -342,6 +342,7 @@ function GISServices() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
+                  style={{ borderBottom: "0.5px solid #51cbce40" }}
                   className="row custom-card"
                 >
                   <motion.div
@@ -416,7 +417,7 @@ function GISServices() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
-                  className="row custom-card"
+                  className="row custom-card border-bottom"
                 >
                   <motion.div
                     animate={{

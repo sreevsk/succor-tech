@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.7b1bf999.css",
-    "main.js": "./static/js/main.2e653c17.js",
+    "main.css": "./static/css/main.12ac3bab.css",
+    "main.js": "./static/js/main.ec7ecca1.js",
     "static/media/AerialLidar_01.png": "./static/media/AerialLidar_01.20aae8b1cc47956dd70d.png",
     "static/media/temp-hire.png": "./static/media/temp-hire.c56f4a54f757c4f6a070.png",
     "static/media/Ortho.png": "./static/media/Ortho.daceec4ba8eea11a52c2.png",
@@ -9,19 +9,39 @@
     "static/media/full-time-hire.jpg": "./static/media/full-time-hire.cab084a178f9b4fbc0a6.jpg",
     "static/media/clouds.png": "./static/media/clouds.3c700c1313cc1cd3d3c5.png",
     "static/media/succor-img.jpg": "./static/media/succor-img.0e1675dc9d58f884de7c.jpg",
+    "static/media/toyota-logos.png": "./static/media/toyota-logos.a219b40d5e8c1b20acfa.png",
+    "static/media/Blackstone-Tech-Group.png": "./static/media/Blackstone-Tech-Group.1693d2e0b7801a4bfed2.png",
     "static/media/MobileLidar.png": "./static/media/MobileLidar.39376f3f1b1422089aff.png",
     "static/media/UAV02.png": "./static/media/UAV02.a0b3b6c844f8a8bcf11b.png",
+    "static/media/innovative-logo.png": "./static/media/innovative-logo.bf89724716a91b7d5769.png",
     "static/media/AerialLidar_05.png": "./static/media/AerialLidar_05.463f6254f21e0b7831f6.png",
+    "static/media/ThreeBridgeSolutions.jpg": "./static/media/ThreeBridgeSolutions.7d6aa00772c85de83f51.jpg",
+    "static/media/TCS.png": "./static/media/TCS.8fad14b5ea756100c5bd.png",
+    "static/media/Matrix.png": "./static/media/Matrix.a21d53f15380fca9f51b.png",
+    "static/media/Signature.png": "./static/media/Signature.7528573f4187e3bcdb56.png",
     "static/media/promo.png": "./static/media/promo.f39d32d244fa5beabbaf.png",
     "static/media/contract-to-hire.jpg": "./static/media/contract-to-hire.af1c725c1e984cc90243.jpg",
+    "static/media/Turnberry.jpg": "./static/media/Turnberry.248b9ef490560b016b88.jpg",
+    "static/media/KForce.png": "./static/media/KForce.28f8f9297d554d97981f.png",
+    "static/media/Stefanini.png": "./static/media/Stefanini.661e4382c9ad260e11e8.png",
     "static/media/nucleo-icons.eot": "./static/media/nucleo-icons.bd42d77b9672555647d1.eot",
     "static/media/nucleo-icons.ttf": "./static/media/nucleo-icons.4466aeec3386b965a232.ttf",
+    "static/media/Xperia-Logo.png": "./static/media/Xperia-Logo.2bd7688ddcfd0c595bab.png",
+    "static/media/marlabs.jpg": "./static/media/marlabs.7660e252f4f27a9ea9e2.jpg",
+    "static/media/Randstad.png": "./static/media/Randstad.9b747d101317fec18ea7.png",
     "static/media/nucleo-icons.woff": "./static/media/nucleo-icons.8e954b749f951b654fc6.woff",
+    "static/media/HCL_Technologies-Logo.png": "./static/media/HCL_Technologies-Logo.1c91045da05db1fd327b.png",
     "static/media/nucleo-icons.woff2": "./static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
+    "static/media/IIT.jpg": "./static/media/IIT.25cdd02f8405a6fcfe15.jpg",
+    "static/media/VincentBenjamin_Logo_NEW.png": "./static/media/VincentBenjamin_Logo_NEW.d5a597eedf074b60976a.png",
+    "static/media/NTT-Data-Logo.png": "./static/media/NTT-Data-Logo.3741d9792e3ac5b28a23.png",
+    "static/media/Amplifiedsourcing.jpeg": "./static/media/Amplifiedsourcing.08fa1178078f72bb696a.jpeg",
+    "static/media/ACS Solutions.jpg": "./static/media/ACS Solutions.e9ea103b91117a877b97.jpg",
+    "static/media/GardnerResourcesConsulting.png": "./static/media/GardnerResourcesConsulting.e57900ff3b8715d968ea.png",
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.7b1bf999.css",
-    "static/js/main.2e653c17.js"
+    "static/css/main.12ac3bab.css",
+    "static/js/main.ec7ecca1.js"
   ]
 }

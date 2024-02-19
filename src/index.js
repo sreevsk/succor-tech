@@ -41,6 +41,8 @@ import ContactUs from "components/ContactUs/ContactUs";
 import ItConsultingServices from "components/ItConsultingServices/ItConsultingServices";
 import ItProjectServices from "components/ItProjectServices/ItProjectServices";
 import GISServices from "components/GISServices/GISServices";
+import OurPortfolio from "components/OurPortfolio/OurPortfolio";
+import OurJobs from "components/OurJobs/OurJobs";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function ScrollToTop() {
@@ -65,6 +67,8 @@ root.render(
       <Route path="/it-consulting" element={<ItConsultingServices />} />
       <Route path="/it-project" element={<ItProjectServices />} />
       <Route path="/gis-services" element={<GISServices />} />
+      <Route path="/our-portfolio" element={<OurPortfolio />} />
+      <Route path="/our-jobs" element={<OurJobs />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
     <Footer />

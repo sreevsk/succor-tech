@@ -10,7 +10,6 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
   Collapse,
   Navbar,
   NavItem,
@@ -203,18 +202,12 @@ function IndexNavbar() {
                   </DropdownToggle>
                 </motion.div>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
+                  <Link className="dropdown-item" to="/our-portfolio">
                     Our Portfolio
-                  </DropdownItem>
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
+                  </Link>
+                  <Link className="dropdown-item" to="/our-jobs">
                     Our Jobs
-                  </DropdownItem>
+                  </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
