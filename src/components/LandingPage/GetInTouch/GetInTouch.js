@@ -117,7 +117,7 @@ function GetInTouch() {
           </Container>
         </div>
 
-        <section className="py-4 section-bubble3">
+        <section className="py-4 get-in-touch-container">
           <motion.div
             initial={{ scale: 0.5, opacity: 0.5 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -125,8 +125,8 @@ function GetInTouch() {
             viewport={{ once: true }}
             className="container"
           >
-            <h1>{data.title}</h1>
-            <p className="pt-3">
+            <h1 className=" text-white">{data.title}</h1>
+            <p className="pt-3 text-white">
               <b>{data.title} </b>is like the virtual bridge between job
               seekers, Project developers and clients, providing them with
               end-to-end solutions; with a team of qualified, experienced and
@@ -169,6 +169,7 @@ function GetInTouch() {
             </Row>
           </motion.div>
         </section>
+        <div className="section-bubble-cs"></div>
       </div>
     </>
   );

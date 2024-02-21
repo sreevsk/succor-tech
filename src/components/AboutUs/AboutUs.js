@@ -27,52 +27,50 @@ function AboutUs() {
           />
         </motion.div>
         <motion.div
+          className="container title-container pb-3"
+          initial={{ opacity: 0, scale: 1.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="owner">
+            <div className="avatar"></div>
+            <div className="name">
+              <h4 className="font-weight-bolder mb-2">
+                About Us <br />
+              </h4>
+              <h6 className="font-weight-normal pb-1">
+                Passionate professionals driving innovation for a better world.
+              </h6>
+            </div>
+          </div>
+          <Row>
+            <Col className="ml-auto mr-auto">
+              <p>
+                <b>{data.title}</b> is like the virtual bridge between job
+                seekers, project developers and clients, providing them with
+                end-to-end solutions; with a team of qualified, experienced and
+                like-minded people with a “Vision and Mission” to achieve a
+                common goal by delivering niche support and services in the
+                field of IT and Non-IT having a back-up team of equally
+                qualified and efficient Developers, Programmers, Strategic
+                Planners who invest their entire knowledge and resources in
+                understanding the ever growing trends and area to area economic
+                development and help create a bridge to satisfy the demands of
+                our Clients globally.
+              </p>
+              <br />
+            </Col>
+          </Row>
+        </motion.div>
+        <motion.div
           initial={{ y: 150 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
-          className="section-bubble1 profile-content"
-        >
-          <motion.div
-            className="container"
-            initial={{ opacity: 0, scale: 1.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="owner">
-              <div className="avatar"></div>
-              <div className="name">
-                <h4 className="font-weight-bolder mb-2">
-                  About Us <br />
-                </h4>
-                <h6 className="font-weight-normal pb-1">
-                  Passionate professionals driving innovation for a better
-                  world.
-                </h6>
-              </div>
-            </div>
-            <Row>
-              <Col className="ml-auto mr-auto">
-                <p>
-                  <b>{data.title}</b> is like the virtual bridge between job
-                  seekers, project developers and clients, providing them with
-                  end-to-end solutions; with a team of qualified, experienced
-                  and like-minded people with a “Vision and Mission” to achieve
-                  a common goal by delivering niche support and services in the
-                  field of IT and Non-IT having a back-up team of equally
-                  qualified and efficient Developers, Programmers, Strategic
-                  Planners who invest their entire knowledge and resources in
-                  understanding the ever growing trends and area to area
-                  economic development and help create a bridge to satisfy the
-                  demands of our Clients globally.
-                </p>
-                <br />
-              </Col>
-            </Row>
-          </motion.div>
-        </motion.div>
-        <section className="py-4 section-bubble2">
+          className="section-bubble-cs-1 curv-section profile-content"
+        ></motion.div>
+        <section className="py-4 about-us-container">
           <motion.div
             initial={{ opacity: 0, scale: 1.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -109,6 +107,7 @@ function AboutUs() {
             </p>
           </motion.div>
         </section>
+        <div className="section-bubble-cs-2 curv-section profile-content"></div>
       </div>
     </>
   );

@@ -66,7 +66,7 @@ function GISServices() {
           whileInView={{ y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
-          className="profile-content section-bubble1"
+          className="profile-content"
         >
           <motion.div
             className="container pt-4"
@@ -102,8 +102,8 @@ function GISServices() {
             </Row>
           </motion.div>
         </motion.div>
-
-        <div className="section-bubble2">
+        <div className="section-bubble1 curv-section"></div>
+        <div className="content-1">
           <motion.div
             initial={{ y: -150, scale: 0.5 }}
             whileInView={{ y: 0, scale: 1 }}
@@ -168,8 +168,8 @@ function GISServices() {
             </div>
           </motion.div>
         </div>
-
-        <div className="section-bubble3">
+        <div className="section-bubble2 curv-section"></div>
+        <div className="content-2">
           <motion.div
             initial={{ y: 150, scale: 1.2 }}
             whileInView={{ y: 0, scale: 1 }}
@@ -180,7 +180,7 @@ function GISServices() {
             <h4 className="font-weight-bolder text-white">
               Digital Photogrammetry
             </h4>
-            <p className="pt-3">
+            <p className="pt-3 text-white">
               Dharani have state of the art facilities for offering services
               that covers a wide range of photogrammetric service requirements.
               Our services are envisioned to meet the diverse needs of our
@@ -188,18 +188,18 @@ function GISServices() {
               are based on the unique set of customer requirements and
               challenges.
             </p>
-            <p className="pt-3">
+            <p className="pt-3 text-white">
               Photogrammetry allows you to obtain reliable information and
               measurements of physical objects from photographs and use them for
               development of maps, drawings, or 3D models of terrains. Aerial
               images require pre- and post-processing using Photogrammetry
               before they can be used to extract valuable geo-data.
             </p>
-            <p className="pt-3">
+            <p className="pt-3 text-white">
               DGT has an extensive experience in handling Photogrammetry
               projects on all scales of mapping.
             </p>
-            <p className="pt-3">
+            <p className="pt-3 text-white">
               High quality aerial photography is the primary foundation for
               Photogrammetry mapping, and we have executed numerous projects
               over varied applications.
@@ -208,7 +208,7 @@ function GISServices() {
               SERVICES OFFERED INCLUDE
             </h5>
 
-            <div className="gis-list">
+            <div className="gis-list pb-3">
               {services.dpItems.map((item, index) => (
                 <motion.div
                   key={index}
@@ -243,7 +243,7 @@ function GISServices() {
                     className="col-md-10 text-container"
                   >
                     <div className="text text-left">
-                      <p className="description text-capitalize">
+                      <p className="description  text-white text-capitalize">
                         <b>{item}</b>
                       </p>
                     </div>
@@ -253,8 +253,8 @@ function GISServices() {
             </div>
           </motion.div>
         </div>
-
-        <div className="section-bubble4">
+        <div className="section-bubble3 curv-section"></div>
+        <div className="content-3">
           <motion.div
             initial={{ x: -150, scale: 0.5 }}
             whileInView={{ x: 0, scale: 1 }}
@@ -286,8 +286,8 @@ function GISServices() {
             />
           </motion.div>
         </div>
-
-        <div className="section-bubble5">
+        <div className="section-bubble4 curv-section"></div>
+        <div className="content-4">
           <div className="text-left container text-white pt-1">
             <h4 className="font-weight-bolder">Mobile LiDAR</h4>
             <p className="pt-3 pb-3">
@@ -305,8 +305,8 @@ function GISServices() {
             />
           </div>
         </div>
-
-        <div className="section-bubble6">
+        <div className="section-bubble5 curv-section"></div>
+        <div className="content5">
           <motion.div
             initial={{ x: 150, scale: 1.2 }}
             whileInView={{ x: 0, scale: 1 }}
@@ -378,8 +378,8 @@ function GISServices() {
             />
           </motion.div>
         </div>
-
-        <div className="section-bubble7">
+        <div className="section-bubble6 curv-section"></div>
+        <div className="content6">
           <div className="text-left container text-white pt-1">
             <h4 className="font-weight-bolder">Aerial LiDAR</h4>
             <p className="pt-3">
@@ -463,7 +463,7 @@ function GISServices() {
             />
           </div>
         </div>
-
+        <div className="section-bubble7 curv-section"></div>
         <Container className="questions-window">
           <Card className="card-register">
             <h3 className="title mx-auto">Any Questions ?</h3>

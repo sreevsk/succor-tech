@@ -5,8 +5,8 @@ import CustomScrollTranslate from "components/LandingPage/CustomScrollTransform"
 
 function IndexHeader() {
   const scaleTranslate = CustomScrollTranslate(1, 10, 0, 15);
-  const opacityTranslate = CustomScrollTranslate(1, -30, 0, 15);
-  const yTranslate = CustomScrollTranslate(0, -50 * 100, -100, 0);
+  const opacityTranslate = CustomScrollTranslate(1, -15, 0, 15);
+  const yTranslate = CustomScrollTranslate(0, -500, -100, 0);
   return (
     <>
       <motion.div

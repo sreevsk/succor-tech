@@ -116,7 +116,8 @@ function Support() {
             </Row>
           </motion.div>
         </motion.div>
-        <section className="py-4 section-bubble2">
+
+        <section className="py-4 content1">
           <div className="container op-team-support pb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -325,16 +326,17 @@ function Support() {
             </Row>
           </div>
         </section>
-        <section className="section-bubble3">
+        <div className="section-bubble1 curv-section"></div>
+        <section className="content2">
           <motion.div
             initial={{ opacity: 0, scale: 2 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="pb-0 container op-team-support"
+            className="container op-team-support"
           >
             <h2 className="title text-white">Monitoring Team Support</h2>
-            <p className="pt-1">
+            <p className="pt-1 text-white">
               Like many IT operations teams, you don’t lack monitoring. In fact,
               the opposite is true—getting too many irrelevant events can drown
               out meaningful information. So troubleshooting eats up too much of
@@ -386,6 +388,7 @@ function Support() {
             </Row>
           </motion.div>
         </section>
+        <div className="section-bubble2 curv-section"></div>
       </div>
     </>
   );
