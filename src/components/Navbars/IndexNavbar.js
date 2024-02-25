@@ -156,7 +156,7 @@ function IndexNavbar() {
                     IT Project Services
                   </Link>
                   <Link className="dropdown-item" to="/gis-services">
-                    IT Consulting Services
+                    GIS Services
                   </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>

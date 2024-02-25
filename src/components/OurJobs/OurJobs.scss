@@ -3,4 +3,24 @@
     background-position: center -137px;
     min-height: 40vh !important;
   }
+  .blueish-color {
+    color: #12b5d4;
+  }
+  .border-bottom {
+    border-bottom: 0.5px solid #607d8b4f !important;
+  }
+  .custom-card {
+    border-radius: 10px;
+    .service-icon {
+      display: grid;
+      font-size: 100px;
+      opacity: 0.1;
+      top: -20px;
+      padding-left: 10px;
+      color: #3a587f;
+    }
+    .col-md-11 {
+      margin-left: -50px;
+    }
+  }
 }

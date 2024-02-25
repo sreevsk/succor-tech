@@ -43,6 +43,7 @@ import ItProjectServices from "components/ItProjectServices/ItProjectServices";
 import GISServices from "components/GISServices/GISServices";
 import OurPortfolio from "components/OurPortfolio/OurPortfolio";
 import OurJobs from "components/OurJobs/OurJobs";
+import JobInfo from "components/JobInfo/JobInfo";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function ScrollToTop() {
@@ -69,6 +70,7 @@ root.render(
       <Route path="/gis-services" element={<GISServices />} />
       <Route path="/our-portfolio" element={<OurPortfolio />} />
       <Route path="/our-jobs" element={<OurJobs />} />
+      <Route path="/job-info/:id" element={<JobInfo />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
     <Footer />

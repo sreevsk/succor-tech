@@ -1,0 +1,24 @@
+.job-info-section {
+  .page-header {
+    background-position: center -137px;
+    min-height: 40vh !important;
+  }
+  .title-container {
+    z-index: 10;
+    position: relative;
+    margin-bottom: -100px;
+  }
+  .about-us-container {
+    background-color: #6c757d;
+  }
+  .questions-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card-register {
+      background-color: #092f5c94;
+      width: 80vh;
+      max-width: none;
+    }
+  }
+}
