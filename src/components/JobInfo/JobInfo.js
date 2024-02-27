@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./JobInfo.scss";
 import jobData from "../../assets/properties/job-data.json";
 import { motion } from "framer-motion";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import {
   Button,
@@ -17,6 +18,41 @@ import {
 } from "reactstrap";
 function JobInfo() {
   const { id } = useParams();
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneNumberRef = useRef(null);
+  const coverLetterRef = useRef(null);
+
+  const postJob = async () => {
+    try {
+      const subject = "Apply for this Position - Jobs Page";
+      const bodyHtml =
+        "<p> Name : " +
+        nameRef.current.value +
+        "</p> <br>" +
+        "<p> Mail : " +
+        emailRef.current.value +
+        "</p> <br>" +
+        "<p> Telephone : " +
+        phoneNumberRef.current.value +
+        "</p> <br>" +
+        "<p> Cover Letter : " +
+        coverLetterRef.current.value +
+        "</p> <br>" +
+        "<p> Job ID : " +
+        selectedJob.details["jobId"] +
+        "</p> <br>" +
+        "<p> Job Title : " +
+        selectedJob.details["jobTitle"] +
+        "</p> <br>";
+      const response = await axios.get("https://api.example.com/data");
+      // Handle the fetched data
+      console.log(response.data);
+    } catch (error) {
+      // Handle errors
+      console.error("There was a problem with the fetch operation:", error);
+    }
+  };
 
   const jobIdToObjectMap = {};
 
@@ -148,7 +184,7 @@ function JobInfo() {
                       <i className="fa fa-user" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
+                  <Input placeholder="Name" type="text" innerRef={nameRef} />
                 </InputGroup>
                 <label>Email</label>
                 <InputGroup className="form-group-no-border">
@@ -157,7 +193,7 @@ function JobInfo() {
                       <i className="nc-icon nc-email-85" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Email" type="email" />
+                  <Input placeholder="Email" type="email" innerRef={emailRef} />
                 </InputGroup>
                 <label>Telephone</label>
                 <InputGroup className="form-group-no-border">
@@ -166,7 +202,11 @@ function JobInfo() {
                       <i className="fa fa-phone" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Telephone" type="numer" />
+                  <Input
+                    placeholder="Telephone"
+                    type="numer"
+                    innerRef={phoneNumberRef}
+                  />
                 </InputGroup>
                 <label>Cover Letter</label>
                 <InputGroup className="form-group-no-border pb-2">
@@ -175,7 +215,11 @@ function JobInfo() {
                       <i className="fa fa-envelope" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Message" type="textarea" />
+                  <Input
+                    placeholder="Message"
+                    type="textarea"
+                    innerRef={coverLetterRef}
+                  />
                 </InputGroup>
                 <label>Upload Resume</label>
                 <InputGroup className="form-group-no-border pb-2">
@@ -190,7 +234,13 @@ function JobInfo() {
                     <span className="form-check-sign" />
                   </Label>
                 </FormGroup>
-                <Button block className="btn-round" color="info" type="button">
+                <Button
+                  block
+                  className="btn-round"
+                  color="info"
+                  type="button"
+                  onClick={postJob}
+                >
                   Submit
                 </Button>
               </Form>

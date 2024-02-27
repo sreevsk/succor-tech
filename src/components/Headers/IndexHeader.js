@@ -37,10 +37,11 @@ function IndexHeader() {
                   scale: scaleTranslate,
                   opacity: opacityTranslate,
                   translateY: yTranslate,
+                  fontSize: "5em",
                 }}
                 className="presentation-title "
               >
-                Technologies
+                Technology Services
               </motion.h1>
             </div>
             <motion.h2

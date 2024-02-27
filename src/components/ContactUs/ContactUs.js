@@ -81,7 +81,7 @@ function ContactUs() {
                 </div>
                 <div className="text text-center  pt-2">
                   <h4 className="mt-2">Phone</h4>
-                  <p className="description p-3">+1 (214) 937-4595</p>
+                  <p className="description p-3">+91 7815989782</p>
                 </div>
               </Col>
               <Col md="3">
@@ -102,7 +102,7 @@ function ContactUs() {
                 <div className=" text-center text pt-2">
                   <h4 className="mt-2">Email</h4>
                   <p className="description p-3">
-                    hr@nascenttechnologiesinc.com
+                    hr@succortechnologyservices.com
                   </p>
                 </div>
               </Col>
