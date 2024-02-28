@@ -22,7 +22,7 @@ function Footer() {
           >
             <a
               target="_blank"
-              href="https://twitter.com/NascentInc"
+              href="https://twitter.com/SuccorTec"
               rel="noreferrer"
               id="twitter"
               style={{ color: "#1d9bf0" }}
@@ -43,7 +43,7 @@ function Footer() {
           >
             <a
               target="_blank"
-              href="https://www.facebook.com/Nascenttechnologiesinc"
+              href="https://www.facebook.com/SuccorTechnologiesServices"
               rel="noreferrer"
               id="facebook"
               style={{ color: "#0866ff" }}
@@ -64,7 +64,7 @@ function Footer() {
           >
             <a
               target="_blank"
-              href="https://www.instagram.com/nascenttechnologiesinc/"
+              href="https://www.instagram.com/succortechnologyservices/"
               rel="noreferrer"
               id="insta"
               style={{ color: "#c93a99" }}
@@ -85,7 +85,7 @@ function Footer() {
           >
             <a
               target="_blank"
-              href="https://www.linkedin.com/company/nascent-technologies-inc"
+              href="https://www.linkedin.com/company/succortechnologyservices/"
               rel="noreferrer"
               id="linkedin"
               style={{ color: "#0a66c2" }}
@@ -94,27 +94,6 @@ function Footer() {
             </a>
             <UncontrolledTooltip placement="bottom" target="linkedin" delay={0}>
               Connect with us
-            </UncontrolledTooltip>
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0.5, x: -70, y: 50 }}
-            whileInView={{ scale: 1, x: 0, y: 0 }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.3, transition: { duration: 0.2 } }}
-            viewport={{ once: true }}
-            className="col-md-1"
-          >
-            <a
-              target="_blank"
-              href="https://www.youtube.com/channel/UCh4vUkRnqnQZUd03ZbL_z1Q"
-              rel="noreferrer"
-              id="youtube"
-              style={{ color: "#f00" }}
-            >
-              <i className="fa fa-youtube"></i>
-            </a>
-            <UncontrolledTooltip placement="bottom" target="youtube" delay={0}>
-              Subscribe to us
             </UncontrolledTooltip>
           </motion.div>
         </Row>
