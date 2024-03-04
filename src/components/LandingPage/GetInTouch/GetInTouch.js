@@ -65,7 +65,7 @@ function GetInTouch() {
                   <div className="description">
                     <h4 className="info-title">Phone</h4>
                     <p className="description p-3">
-                      +91 7815989782 <br />
+                      +1 737-777-2843 <br />
                       <br />
                       <br />
                     </p>

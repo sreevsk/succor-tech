@@ -106,7 +106,7 @@ function Footer() {
             className="credits ml-auto"
           >
             <span className="copyright text-dark" style={{ fontSize: "1rem" }}>
-              © 2021 Nascent Technologies Inc. All Rights Reserved.
+              © 2021 Succor Technologies Services Inc. All Rights Reserved.
             </span>
           </motion.div>
         </Row>
